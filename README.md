@@ -1,48 +1,112 @@
-# java-email-client
-A java based application that uses Java Mail API to send, receive,forward emails. 
+# Alpha Mail - Java Email Client
 
-# Goals
-To determine the feasibility and, if feasible, the computational requirements to manage our own mail account. The program will provide a standard graphic user interface to access email account. The interface will be intuitive enough for the users to access the email account directly without the help of browser.
+A Java-based application that uses the Java Mail API to send, receive, and forward emails. Alpha Mail aims to provide a standalone desktop application with a modern graphical user interface, enabling users to manage their email accounts without relying on a web browser.
 
-# Purpose
-This Application is used for sending and receiving mail to and from the recipient.
+## 🏁 Goals
+- **Feasibility Study:** Determine whether it’s feasible to manage a mail account through a desktop application.
+- **Intuitive Interface:** Create a user-friendly GUI that simplifies email management.
+- **Offline Functionality:** Enable limited functionalities (like drafting and scheduling) even without an active internet connection.
 
-# Scope
-1. This Application named alpha mail will be used to send and receive messages and attachments offline i.e. without the use of any browser.
-2. Unlike the other mail servers this Application can be used for the other users who are not registered in the alpha mail.
-3. Even if user lacks internet connection then also sending mails is possible.
-4. Mail Server like yahoo, Gmail, Hotmail, outlook can be used for accessing the mail send by the sender.
+## 🎯 Purpose
+Alpha Mail is designed for sending, receiving, and forwarding emails directly from the application, offering an alternative to browser-based email clients.
 
-# Deliverables
-An interface capable of:
-1. Retrieving Mail
-2. Sending Mail.
-3. Forwarding Mail.
-4. Deleting Mail.
+## 📚 Scope
+- Standalone desktop application.
+- Compatible with major mail servers: Gmail, Yahoo, Outlook, Hotmail, etc.
+- Supports users not registered within the Alpha Mail system.
+- Basic offline functionality (drafting, queuing emails for sending).
 
-# Knowledge Areas Needed for Project
-1. Software Engineering
-2. Java Programming Language
-3. Knowledge of Java Mail API and basic networking protocols such as POP, SMTP, IMAP.
+## 🚀 Features
+- **Login:** Secure login for authorized users.
+- **Send Mail:** Compose and send emails with attachments.
+- **Receive Mail:** Retrieve and read emails with real-time notifications.
+- **Forward Mail:** Forward received emails to other recipients.
+- **Delete Mail:** Delete unwanted emails.
+- **News Updates:** Display latest updates or notifications.
 
-# Product Functions
-The System will allow access only to authorized users with specific role. Depending upon the users role he/she will be able to access only specific module of the system.
-1. LOGIN- A Login facility for enabling only authorized access to the system.
-2. SENDING MAIL- The user can send their composed mail along with the attachment using this module.
-3. RECEIVING MAIL- The receiver client can view the pop-up notification using receiving module.
-4. FORWARDING MAIL- The user can forward any mail which he has received.
-5. Facility of latest news updates.
+## 🛠️ Tech Stack
+- **Programming Language:** Java
+- **Libraries & APIs:** Java Mail API
+- **Networking Protocols:** SMTP, IMAP, POP3
 
-# User Characteristics
-1. User have elementary computer knowledge and the knowledge of use of Application.
-2. The user should know the details of its corresponding email account.
+## 📂 Project Structure
+```
+├── src
+│   ├── Main.java
+│   ├── Login.java
+│   ├── MailSender.java
+│   ├── MailReceiver.java
+│   └── MailForwarder.java
+├── resources
+│   └── icons, images
+├── README.md
+└── .gitignore
+```
 
-# General Constraints
-The sender email-id and password is required. The mail will be sent to particular server chosen in the drop-down menu.
+## 🏃‍♀️ Installation & Usage
 
-#Assumptions and Dependencies
-These are some following assumptions:
-1. The system is having required configuration as well as Windows operating system.
-2. Full working of alpha mail Application is dependents on the availability of Internet connection.
+### Prerequisites
+- JDK 11 or later
+- Internet connection (for online functionalities)
 
+### Setup
+1. **Clone the repository:**
+```
+git clone https://github.com/yourusername/alpha-mail.git
+cd alpha-mail
+```
+
+2. **Compile the project:**
+```
+javac -cp .:mail.jar src/*.java
+```
+
+3. **Run the application:**
+```
+java -cp .:mail.jar src.Main
+```
+
+## 🔑 Configuration
+- Add your email server credentials in the configuration file (`config.properties`).
+
+Example:
+```
+mail.smtp.host=smtp.gmail.com
+mail.smtp.port=587
+mail.smtp.auth=true
+mail.smtp.starttls.enable=true
+username=your-email@gmail.com
+password=your-email-password
+```
+
+> **⚠️ Important:** For security, use environment variables or encrypted password storage instead of plaintext credentials.
+
+## 📖 User Requirements
+- Basic computer literacy.
+- Knowledge of email account credentials.
+
+## 🛡️ Security & Constraints
+- Secure authentication required (username and password).
+- Internet connection necessary for sending/receiving emails.
+- Supports Windows (can be extended to macOS/Linux).
+
+## 🤝 Contributing
+Contributions are welcome!
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Create a pull request.
+
+## 📃 License
+MIT License
+
+## 📩 Contact
+- **Author:** [Your Name]
+- **Email:** your-email@example.com
+- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
+
+---
+
+Let me know if you want me to tweak anything or add more sections! 🚀
 
